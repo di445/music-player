@@ -7,13 +7,45 @@ $wheelRadius: 100%;
   box-shadow: 6px 7px 5px 0 rgba(0,0,0,0.75);
 }
 body {
-  margin: 10px;
   padding: 50px;
-  background-color: gray;
+  background: rgba(207,207,207,1);
+}
+header {
+  color: white;
+  background-color: #455774;
+  position: fixed;
+  z-index: 5000;
+  top: 0;
+  left: 0;
+  height: 40px;
+  width: 100%;
+  padding: 6px 0 0 15px;
+  font: 100% serif;
+  font-size: 25px;
+}
+.photos {
+  background-color: #7e95ad;
+  text-align: center;
+  position: fixed;
+  top: 46px;
+  width: 100%;
+  left: 0;
+  padding: 5px;
+  border-bottom: 2px solid black;
+  img {
+    margin: 0 auto;
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    border: 5px solid white;
+  }
 }
 .canvas {
-  margin: 30px 0px 0px 0px;
+  margin: 30px 0 0;
   text-align: center;
+  position: relative;
+  z-index: -1;
+  top: 120px;
 }
 .playerBody {
   @include boxShadows;
@@ -54,18 +86,10 @@ body {
     top: 40px;
   }
 }
-.photos{
-  text-align: center;
-  img{
-    margin: 0 auto;
-    width:150px;
-    height:150px;
-    border-radius: 100%;
-    border: 5px solid white;
-  }
-}
-iframe{
-  display:inline;
+iframe {
+  display: inline;
   vertical-align: top;
   margin-left: 2%;
+  border: 10px solid black;
+  @include boxShadows;
 }
