@@ -28,4 +28,21 @@ $(document).ready(function() {
       list: artist
     });
   }
-});
+
+  // change color of music player
+  var colorButton = document.getElementById('changeColor');
+  var playerBody = document.getElementById('playerbody');
+  var innerWheel = document.getElementById('innerWheel');
+
+  $(colorButton).on('click', changeButtonColor);
+
+  function changeButtonColor() {
+    var newColor = generateRandomColor();
+    playerBody.style.backgroundColor = newColor;
+    innerWheel.style.backgroundColor = newColor;
+  }
+  function generateRandomColor(){
+    var newColor = ['pink','blue','orange','yellow','green','purple','red','#5A5A5A'];
+    return newColor[Math.floor(Math.random()*newColor.length)];
+  }
+});//end document.ready
