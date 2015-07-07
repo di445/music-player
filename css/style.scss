@@ -1,5 +1,5 @@
 $borderRad: 20px;
-$displayAndWheelBorder: 2px solid black;
+$displayAndWheelBorder: 3px solid black;
 $wheelRadius: 100%;
 @mixin boxShadows {
   -webkit-box-shadow: 6px 7px 5px 0 rgba(0,0,0,0.75);
@@ -12,7 +12,8 @@ body {
   background-color: gray;
 }
 .canvas {
-
+  margin: 30px 0px 0px 0px;
+  text-align: center;
 }
 .playerBody {
   @include boxShadows;
@@ -22,6 +23,7 @@ body {
   margin: 0 auto;
   border: 5px solid black;
   border-radius: $borderRad;
+  display: inline-block;
 }
 .display {
   background-color: white;
@@ -42,7 +44,7 @@ body {
   left: 15px;
   border: $displayAndWheelBorder;
   .innerWheel {
-    border: 2px solid black;
+    border: $displayAndWheelBorder;
     width: 86px;
     height: 86px;
     border-radius: $wheelRadius;
@@ -53,11 +55,17 @@ body {
   }
 }
 .photos{
+  text-align: center;
   img{
     margin: 0 auto;
     width:150px;
     height:150px;
     border-radius: 100%;
-    border: 2px solid white;
+    border: 5px solid white;
   }
+}
+iframe{
+  display:inline;
+  vertical-align: top;
+  margin-left: 2%;
 }

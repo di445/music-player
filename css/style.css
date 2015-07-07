@@ -4,6 +4,11 @@ body {
   background-color: gray;
 }
 
+.canvas {
+  margin: 30px 0px 0px 0px;
+  text-align: center;
+}
+
 .playerBody {
   -webkit-box-shadow: 6px 7px 5px 0 rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 6px 7px 5px 0 rgba(0, 0, 0, 0.75);
@@ -14,6 +19,7 @@ body {
   margin: 0 auto;
   border: 5px solid black;
   border-radius: 20px;
+  display: inline-block;
 }
 
 .display {
@@ -23,7 +29,7 @@ body {
   margin: 10%;
   height: 43%;
   text-align: center;
-  border: 2px solid black;
+  border: 3px solid black;
 }
 
 .outerWheel {
@@ -34,10 +40,10 @@ body {
   position: relative;
   top: 34px;
   left: 15px;
-  border: 2px solid black;
+  border: 3px solid black;
 }
 .outerWheel .innerWheel {
-  border: 2px solid black;
+  border: 3px solid black;
   width: 86px;
   height: 86px;
   border-radius: 100%;
@@ -47,12 +53,21 @@ body {
   top: 40px;
 }
 
+.photos {
+  text-align: center;
+}
 .photos img {
   margin: 0 auto;
   width: 150px;
   height: 150px;
   border-radius: 100%;
-  border: 2px solid white;
+  border: 5px solid white;
+}
+
+iframe {
+  display: inline;
+  vertical-align: top;
+  margin-left: 2%;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -16,15 +16,16 @@ $(document).ready(function() {
       var artist = image.id.split("-").join(" ");
       $(this).css('background-image', 'url(' + imageURL + ')');
       $(this).css('background-size', '100% 100%');
-      console.log(this.style);
       playMusic(artist);
     }
   });
 
   function playMusic(artist) {
-    console.log('make API call for ' + artist);
+    // console.log('make API call for ' + artist);
+    player.cuePlaylist({
+      autoplay: 1,
+      listType: 'search',
+      list: artist
+    });
   }
-
-  //functions from youTube API to insert iframes
-
 });
