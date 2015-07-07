@@ -1,0 +1,63 @@
+$borderRad: 20px;
+$displayAndWheelBorder: 2px solid black;
+$wheelRadius: 100%;
+@mixin boxShadows {
+  -webkit-box-shadow: 6px 7px 5px 0 rgba(0,0,0,0.75);
+  -moz-box-shadow: 6px 7px 5px 0 rgba(0,0,0,0.75);
+  box-shadow: 6px 7px 5px 0 rgba(0,0,0,0.75);
+}
+body {
+  margin: 10px;
+  padding: 50px;
+  background-color: gray;
+}
+.canvas {
+
+}
+.playerBody {
+  @include boxShadows;
+  background-color: pink;
+  width: 200px;
+  height: 500px;
+  margin: 0 auto;
+  border: 5px solid black;
+  border-radius: $borderRad;
+}
+.display {
+  background-color: white;
+  color: black;
+  border-radius: 20px;
+  margin: 10%;
+  height: 43%;
+  text-align: center;
+  border: $displayAndWheelBorder;
+}
+.outerWheel {
+  background-color: white;
+  width: 172px;
+  height: 172px;
+  border-radius: $wheelRadius;
+  position: relative;
+  top: 34px;
+  left: 15px;
+  border: $displayAndWheelBorder;
+  .innerWheel {
+    border: 2px solid black;
+    width: 86px;
+    height: 86px;
+    border-radius: $wheelRadius;
+    position: relative;
+    background-color: pink;
+    margin: 0 auto;
+    top: 40px;
+  }
+}
+.photos{
+  img{
+    margin: 0 auto;
+    width:150px;
+    height:150px;
+    border-radius: 100%;
+    border: 2px solid white;
+  }
+}
